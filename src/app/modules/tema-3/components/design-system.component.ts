@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-design-system',
-  templateUrl: './design-system.component.html',
-  styleUrls: ['./design-system.component.css']
+  templateUrl: '.pages/design-system.component.html',
+  styleUrls: ['.pages/design-system.component.css']
 })
 export class DesignSystemComponent {
 
