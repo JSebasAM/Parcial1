@@ -171,30 +171,3 @@ footer {
   color: #98a2b3;
   text-align: center;
 }
-
-@media (max-width: 800px) {
-
-  .hero h1 {
-    font-size: 38px;
-  }
-
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .patterns {
-    grid-template-columns: 1fr;
-  }
-
-  .architecture {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 500px) {
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-}
