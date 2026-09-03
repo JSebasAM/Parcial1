@@ -4,12 +4,14 @@ import { RouterModule } from '@angular/router';
 import { BadgeComponent } from './components/badge/badge.component';
 import { IconComponent } from './components/icon/icon.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     BadgeComponent,
     IconComponent,
     NavbarComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,
@@ -19,6 +21,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     BadgeComponent,
     IconComponent,
     NavbarComponent,
+    HeaderComponent
   ]
 })
 export class SharedModule { }
