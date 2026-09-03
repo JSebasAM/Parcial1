@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DesignSystemComponent } from './pages/design-system/design-system';
 
 const routes: Routes = [
   {
-    path: 'sistema-diseno',
+    path: '',
     component: DesignSystemComponent
   }
 ];
@@ -13,4 +14,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class Tema3RoutingModule { }
-

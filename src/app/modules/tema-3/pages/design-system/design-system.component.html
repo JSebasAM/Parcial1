@@ -1,117 +1,29 @@
- <div class="container">
+<div class="main-container">
 
-  <header class="hero">
+  <app-header
+    [badge]="datosHeader.badge"
+    [titulo]="datosHeader.titulo"
+    [descripcion]="datosHeader.descripcion">
+  </app-header>
 
-    <h1>
-      Sistemas de Diseño
-      en la Arquitectura de Software
-    </h1>
-
-    <p>
-      Los sistemas de diseño permiten establecer principios, patrones
-      y componentes reutilizables para construir software consistente,
-      escalable y fácil de mantener.
-    </p>
-  </header>
-
-  <section class="section">
-    <h2>¿Qué es un sistema de diseño?</h2>
-
-    <p>
-      Un sistema de diseño en arquitectura de software es un conjunto
-      de principios, patrones, reglas y componentes que sirven como guía
-      para diseñar y desarrollar aplicaciones de forma consistente.
-    </p>
-  </section>
-
-  <section class="section">
-
-    <h2>Principios fundamentales</h2>
-
-    <div class="cards">
-
-      <div class="card" *ngFor="let principio of principios">
-
-        <h3>{{ principio.titulo }}</h3>
-
-        <p>
-          {{ principio.descripcion }}
-        </p>
-
-      </div>
-
+  <section class="content-section">
+    <div class="section-header">
+      <h2>Pilares del Sistema de Diseño</h2>
+      <p>Los elementos fundamentales que soportan la arquitectura de una interfaz de usuario escalable.</p>
     </div>
 
+    <div class="cards-grid">
+      <app-card
+        *ngFor="let card of listaTarjetas; let i = index"
+        [numero]="i + 1"
+        [titulo]="card.titulo"
+        [descripcion]="card.descripcion"
+        [beneficios]="card.beneficios"
+        [ejemplo]="card.ejemplo">
+      </app-card>
+    </div>
   </section>
 
-  <section class="section">
-
-    <h2>Patrones de arquitectura</h2>
-
-    <div class="patterns">
-
-      <article
-        class="pattern"
-        *ngFor="let patron of patrones">
-
-        <h3>{{ patron.nombre }}</h3>
-
-        <p>
-          {{ patron.descripcion }}
-        </p>
-
-        <button>
-          Ver patrón →
-        </button>
-
-      </article>
-
-    </div>
-
-  </section>
-
-  <section class="architecture">
-
-    <div>
-      <span class="tag">ESTRUCTURA</span>
-
-      <h2>
-        Diseño orientado a componentes
-      </h2>
-
-      <p>
-        La arquitectura puede organizarse mediante componentes
-        independientes que tienen responsabilidades específicas
-        y pueden reutilizarse en diferentes partes de la aplicación.
-      </p>
-    </div>
-
-    <div class="diagram">
-
-      <div class="box">
-        Presentación
-      </div>
-
-      <div class="arrow">↓</div>
-
-      <div class="box">
-        Lógica de negocio
-      </div>
-
-      <div class="arrow">↓</div>
-
-      <div class="box">
-        Acceso a datos
-      </div>
-
-    </div>
-
-  </section>
-
-  <footer>
-    <p>
-      Sistema de Diseño · Arquitectura de Software
-    </p>
-  </footer>
+  <app-footer></app-footer>
 
 </div>

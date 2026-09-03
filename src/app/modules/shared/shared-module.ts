@@ -13,6 +13,9 @@ import { HeaderComponent } from './components/header/header.component';
     BadgeComponent,
     IconComponent,
     NavbarComponent,
+    CardComponent,
+    FooterComponent,
+    HeaderComponent,
   ],
   imports: [
     CommonModule,
@@ -22,6 +25,9 @@ import { HeaderComponent } from './components/header/header.component';
     BadgeComponent,
     IconComponent,
     NavbarComponent,
+    CardComponent,
+    FooterComponent,
+    HeaderComponent,
   ]
 })
 export class SharedModule { }
