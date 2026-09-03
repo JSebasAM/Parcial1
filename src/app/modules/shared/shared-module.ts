@@ -1,33 +1,35 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { BadgeComponent } from './components/badge/badge.component';
-import { IconComponent } from './components/icon/icon.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router'; // Vital para que funcione routerLink en tu Navbar
+
+// Verifica que estas rutas apunten exactamente a donde tienes tus archivos .ts
+import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card/card';
 import { FooterComponent } from './components/footer/footer';
-import { HeaderComponent } from './components/header/header.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { BadgeComponent } from './components/badge/badge.component';
+import { IconComponent} from './components/icon/icon.component';
 
 @NgModule({
   declarations: [
-    BadgeComponent,
     IconComponent,
-    NavbarComponent,
+    HeaderComponent,
     CardComponent,
     FooterComponent,
-    HeaderComponent,
+    NavbarComponent,
+    BadgeComponent,
   ],
   imports: [
     CommonModule,
-    RouterModule,
+    RouterModule
   ],
   exports: [
-    BadgeComponent,
     IconComponent,
-    NavbarComponent,
+    HeaderComponent,
     CardComponent,
     FooterComponent,
-    HeaderComponent,
+    NavbarComponent,
+    BadgeComponent
   ]
 })
 export class SharedModule { }

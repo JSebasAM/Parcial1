@@ -1,0 +1,106 @@
+<div class="container">
+
+  <app-header
+    badge="Docente: Jesus David Mejia | Facultad de Ingeniería"
+    titulo="Principios de la Arquitectura de Software"
+    descripcion="Los principios de una buena arquitectura de software son guías que permiten crear sistemas organizados, fáciles de entender y que puedan evolucionar con el tiempo. Estos principios ayudan a reducir la complejidad y asegurar que el software pueda adaptarse a nuevas necesidades.">
+  </app-header>
+
+  <section class="section">
+    <h2>Principios Fundamentales</h2>
+
+    <div class="cards">
+      <app-card
+        *ngFor="let principio of listaPrincipios; let i = index"
+        [numero]="i + 1"
+        [titulo]="principio.titulo"
+        [descripcion]="principio.descripcion"
+        [beneficios]="principio.beneficios"
+        [ejemplo]="principio.ejemplo">
+      </app-card>
+    </div>
+  </section>
+
+  <section class="architecture">
+    <div>
+      <h2>Resumen de los Principios</h2>
+      <p>Comparativa rápida de los objetivos de cada principio arquitectónico aplicado al diseño de software.</p>
+    </div>
+
+    <div class="tabla-container">
+      <table class="tabla-resumen">
+        <thead>
+        <tr>
+          <th>Principio</th>
+          <th>Objetivo</th>
+          <th>Descripción</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of listaResumen">
+          <td>{{ item.principio }}</td>
+          <td>
+            <app-badge [type]="item.tipoBadge" [text]="item.textoNivel"></app-badge>
+          </td>
+          <td>{{ item.descripcion }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Ejercicios Prácticos</h2>
+
+    <div class="ejercicio-box">
+      <h3>Ejercicio 1 - Clasificar Módulos y Solución</h3>
+      <p><strong>Módulos Sugeridos:</strong> Usuarios, Carrito, Pagos, Catálogo, Inventario y Notificaciones.</p>
+      <ul>
+        <li><strong>Usuarios:</strong> Registrar usuario, Iniciar sesión, Recuperar contraseña, Editar perfil.</li>
+        <li><strong>Carrito:</strong> Agregar producto, Eliminar producto, Calcular total de compra, Aplicar descuentos.</li>
+        <li><strong>Pagos:</strong> Procesar pago, Generar factura.</li>
+        <li><strong>Catálogo:</strong> Agregar producto al catálogo, Actualizar precio.</li>
+        <li><strong>Inventario:</strong> Gestionar inventario.</li>
+        <li><strong>Notificaciones:</strong> Enviar notificación por correo.</li>
+      </ul>
+      <div class="analisis">
+        <h4>Análisis de la Solución</h4>
+        <p>
+          <app-badge type="success" text="Alta cohesión"></app-badge>
+          Cada módulo agrupa funcionalidades relacionadas.
+        </p>
+        <p>
+          <app-badge type="info" text="Bajo acoplamiento"></app-badge>
+          Los módulos pueden cambiar sin afectar a los demás.
+        </p>
+        <p>
+          <app-badge type="primary" text="Separación de responsabilidades"></app-badge>
+        </p>
+        <p><strong>Escalabilidad:</strong> Se pueden convertir en microservicios en el futuro. | <strong>Mantenibilidad:</strong> Los cambios son localizados.</p>
+      </div>
+    </div>
+
+    <div class="tabla-container mt-4">
+      <h3>Ejercicio 2 - Identificar el Problema</h3>
+      <table class="tabla-resumen">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>Situación</th>
+          <th>Tipo de Problema</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let ej of listaEjercicios; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ ej.situacion }}</td>
+          <td><app-badge [type]="ej.tipoBadge" [text]="ej.problema"></app-badge></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <app-footer></app-footer>
+
+</div>
