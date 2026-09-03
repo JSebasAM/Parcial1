@@ -1,7 +1,7 @@
 <div class="container">
 
   <app-header
-    [badge]="datosHeader.badge"
+    [badge]="datosHeader.badge || ''"
     [titulo]="datosHeader.titulo"
     [descripcion]="datosHeader.descripcion">
   </app-header>
@@ -68,8 +68,8 @@
         *ngFor="let nivel of nivelesAtomicos; let i = index"
         [numero]="i + 1"
         [titulo]="nivel.titulo"
-        [descripcion]="nivel.descripcion"
-        [ejemplo]="nivel.ejemplo">
+        [descripcion]="nivel.descripcion || ''"
+        [ejemplo]="nivel.ejemplo || ''">
       </app-card>
     </div>
   </section>
