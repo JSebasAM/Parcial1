@@ -12,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'tema-2'
+    redirectTo: 'tema-1'
   },
 ];
 
