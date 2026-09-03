@@ -1,0 +1,30 @@
+.footer {
+  background-color: #101828;
+  color: #98a2b3;
+  padding: 40px 10% 20px;
+  text-align: center;
+  margin-top: 60px;
+  border-top: 1px solid #1d2939;
+
+  .footer-content {
+    margin-bottom: 20px;
+
+    p {
+      margin: 5px 0;
+      font-size: 0.95rem;
+
+      strong {
+        color: #ffffff;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #243b5a;
+    padding-top: 15px;
+    font-size: 0.85rem;
+    color: #667085;
+  }
+}
