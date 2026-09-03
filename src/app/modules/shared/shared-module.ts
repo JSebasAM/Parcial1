@@ -4,12 +4,13 @@ import { RouterModule } from '@angular/router';
 import { BadgeComponent } from './components/badge/badge.component';
 import { IconComponent } from './components/icon/icon.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
+import { CardComponent } from './components/card/card';
 @NgModule({
   declarations: [
     BadgeComponent,
     IconComponent,
     NavbarComponent,
+    CardComponent,
   ],
   imports: [
     CommonModule,
@@ -19,6 +20,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     BadgeComponent,
     IconComponent,
     NavbarComponent,
+    CardComponent,
   ]
 })
 export class SharedModule { }
