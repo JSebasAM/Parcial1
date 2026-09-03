@@ -4,6 +4,9 @@ import { RouterModule } from '@angular/router';
 import { BadgeComponent } from './components/badge/badge.component';
 import { IconComponent } from './components/icon/icon.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CardComponent } from './components/card/card';
+import { FooterComponent } from './components/footer/footer';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [

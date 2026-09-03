@@ -1,0 +1,11 @@
+<article class="card">
+  <div class="icon" *ngIf="numero">{{ numero }}</div>
+  <h3>{{ titulo }}</h3>
+
+  <p *ngIf="descripcion"><strong>Concepto:</strong> {{ descripcion }}</p>
+  <p *ngIf="beneficios"><strong>Beneficios:</strong> {{ beneficios }}</p>
+
+  <div class="ejemplo" *ngIf="ejemplo">
+    <p><strong>Ejemplo:</strong> {{ ejemplo }}</p>
+  </div>
+</article>
